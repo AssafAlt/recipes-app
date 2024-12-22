@@ -1,0 +1,133 @@
+/* Overlay container that takes up the whole screen */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the overlay appears above other content */
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+/* Card styling */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  width: 80%;
+  max-width: 700px;
+  max-height: 80%;
+  overflow-y: auto;
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom right, #fbdb89, #f48982);
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2dvw;
+  height: 2dvw;
+  font-size: 1dvw;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.closeButton:hover {
+  background-color: rgb(232, 232, 232, 0.5);
+}
+
+.cardImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Image shadow */
+}
+
+.cardContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+/* Publisher styling */
+.titles {
+  font-size: 20px;
+
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Ingredient list styling */
+.ingredientList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.ingredientList li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.recipeLink {
+  display: inline-block;
+  font-size: 18px;
+  color: #0066cc;
+  text-decoration: none;
+  margin-top: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(232, 232, 232, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.recipeLink:hover {
+  background-color: rgb(232, 232, 232, 0.5);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1050px) {
+  .closeButton {
+    width: 4dvw;
+    height: 4vw;
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .closeButton {
+    width: 6dvw;
+    height: 6vw;
+    font-size: 4vw;
+  }
+}

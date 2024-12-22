@@ -1,0 +1,79 @@
+.searchBar {
+  background-color: #fff;
+  width: 100%;
+  align-items: center;
+  transition: all 0.3s;
+  display: flex;
+  border-radius: 10rem;
+  justify-content: center;
+  margin-bottom: clamp(2%, 2.5vh, 3%);
+}
+
+.searchField {
+  color: rgba(65, 65, 65, 0.9);
+  background: 0 0;
+  width: 50%;
+  text-align: left;
+  padding-left: 1%;
+  font-size: 2vw;
+  border-radius: 10rem;
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Set border width here */
+  padding-top: clamp(1%, 2vh, 3%);
+  padding-bottom: clamp(1%, 2vh, 3%);
+  outline: none; /* Remove the default outline on focus */
+  transition: border-color 0.3s ease;
+}
+
+.searchField:focus {
+  border-color: #f7a09a;
+}
+
+.searchBtn {
+  cursor: pointer;
+  border-color: rgba(0, 0, 0, 0.1);
+  color: rgba(65, 65, 65, 0.9);
+  padding: 1.5% 4%;
+  font-size: 2vw;
+  background-image: linear-gradient(to bottom left, #fbdb89, #f7a09a);
+  border-radius: 10rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding-top: clamp(1%, 2vh, 3%);
+  padding-bottom: clamp(1%, 2vh, 3%);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.searchBtn:hover {
+  box-shadow: 0 0 12.5px 5px rgba(251, 219, 137, 0.7),
+    0 0 20px 10px rgba(247, 160, 154, 0.7); /* Encompassing glow */
+}
+
+@media screen and (max-width: 850px) {
+  .searchField {
+    width: 60%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 3vw;
+  }
+  .searchBtn {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  .searchBar {
+    margin-bottom: 15%;
+  }
+  .searchField {
+    width: 65%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 5vw;
+  }
+  .searchBtn {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 5vw;
+  }
+}

@@ -1,0 +1,19 @@
+.mainHeader {
+  display: flex;
+  position: fixed;
+  background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+  width: 100%;
+  z-index: 1;
+}
+
+.primaryLogo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.5vw;
+  margin-left: 1.5%;
+}
+@media screen and (max-width: 550px) {
+  .primaryLogo {
+    font-size: 5vw;
+  }
+}

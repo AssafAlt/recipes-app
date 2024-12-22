@@ -1,0 +1,22 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20dvh;
+  width: 100%;
+}
+
+.inner {
+  width: 100%;
+  padding-top: 2%;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  margin: 10px 0;
+}
+@media screen and (max-width: 550px) {
+  .homeContainer {
+    padding-top: 15dvh;
+  }
+}
